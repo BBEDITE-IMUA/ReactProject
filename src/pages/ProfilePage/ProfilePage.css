@@ -1,0 +1,97 @@
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f2f5;
+  }
+  
+  .profile-page {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .profile-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .profile-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+  
+  .profile-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .profile-info {
+    font-size: 16px;
+    color: #555;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: left;
+    width: 100%;
+  }
+  
+  .bank-info {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .bank-info b {
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  .error-message {
+    text-align: center;
+    font-size: 18px;
+    color: #ff0000;
+    margin-top: 50px;
+  }
+  
+  @media (max-width: 600px) {
+    .profile-card {
+      padding: 15px;
+      width: 90%;
+    }
+  
+    .profile-avatar {
+      width: 120px;
+      height: 120px;
+    }
+  
+    .profile-name {
+      font-size: 20px;
+    }
+  
+    .profile-info {
+      font-size: 14px;
+    }
+  
+    .bank-info {
+      font-size: 14px;
+    }
+  }
