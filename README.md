@@ -23,8 +23,7 @@
 
 1. Клонируйте репозиторий:
    ```
-   git clone https://github.com/your-repository-name.git
-   cd your-repository-name
+   git clone https://github.com/BBEDITE-IMUA/ReactProject.git
    ```
 2. Установите зависимости:
     ```
