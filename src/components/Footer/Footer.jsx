@@ -18,13 +18,13 @@ const Footer = () => {
                 </div>
                 <div className="footer__right">
                     <Text size='m' lineHeight="m" view="primary" className="footer__title">
-                        © Моя Компания
+                        © Моя Компания 2024
                     </Text>
                 </div>
             </footer>
           : <footer className="footer">
-            <div className="footer__left">
-                <NavLink to="/" className="footer__nav-button" activeclassname="active">
+            <div className="footer__nav-buttons ">
+                <NavLink style={{marginBottom: "1rem"}} to="/" className="footer__nav-button" activeclassname="active">
                     <Button size="m" label="Главная" view="ghost" form="default" />
                 </NavLink>
                 <NavLink to="/services" className="footer__nav-button" activeclassname="active">
@@ -33,7 +33,7 @@ const Footer = () => {
             </div>
             <div className="footer__right">
                 <Text size='m' lineHeight="m" view="primary" className="footer__title">
-                    © Моя Компания
+                    © Моя Компания 2024
                 </Text>
             </div>
         </footer>
