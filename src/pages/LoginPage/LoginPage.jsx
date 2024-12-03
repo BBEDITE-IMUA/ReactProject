@@ -2,17 +2,17 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Text } from "@consta/uikit/Text";
 import './LoginPage.css';
+import { useDispatch } from "react-redux";
+import { set as setUser } from "../ProfilePage/ProfileSlice";
 
 const AUTH_TOKEN_KEY_NAME = "sber-access_token";
 const REFRESH_TOKEN_KEY_NAME = "sber-refresh_token";
-
-export type Token = string;
 
 export const getToken = () => {
   return localStorage.getItem(AUTH_TOKEN_KEY_NAME) ?? "";
 };
 
-export const saveTokens = (accessToken: Token, refreshToken: Token) => {
+export const saveTokens = (accessToken, refreshToken) => {
   localStorage.setItem(AUTH_TOKEN_KEY_NAME, accessToken);
   localStorage.setItem(REFRESH_TOKEN_KEY_NAME, refreshToken);
 };
@@ -26,6 +26,8 @@ export const dropToken = () => {
 };
 
 const LoginPage = () => {
+  const dispatch = useDispatch()
+
   const [formData, setFormData] = useState({ username: "", password: "" });
   const [invalidInput, setInvalidInput] = useState(false);
   const [error, setError] = useState(null);
@@ -74,6 +76,7 @@ const LoginPage = () => {
       });
 
       const userData = await getMeResp.json();
+      dispatch(setUser(userData));
       saveProfileData(userData);
 
       navigate(`/user/${userData.id}`);
